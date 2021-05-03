@@ -1,5 +1,4 @@
 from flask import Flask, request, make_response, jsonify
-from flask_ngrok import run_with_ngrok
 import json
 import os
 from flask_cors import cross_origin
@@ -8,8 +7,6 @@ from datetime import datetime
 
 # initialize the flask app
 app = Flask(__name__)
-run_with_ngrok(app)
-
 # default route
 @app.route('/')
 def index():
